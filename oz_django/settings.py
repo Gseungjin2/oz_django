@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/5.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 import pymysql
@@ -84,7 +84,7 @@ DATABASES = {
         "USER": "root",
         "PASSWORD": "1234",
         "HOST": "localhost",
-        "PORT": "3307",
+        "PORT": os.environ.get("DB_PORT", 3306),
     }
 }
 
