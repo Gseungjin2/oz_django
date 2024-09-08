@@ -1,4 +1,5 @@
 from django.test import TestCase
+
 from tabom.models import Article, User
 from tabom.services.like_service import do_like
 
